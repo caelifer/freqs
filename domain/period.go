@@ -18,6 +18,10 @@ const (
 	Week               = 7 * Day
 )
 
+func (p Period) Frequency() Frequency {
+	return Frequency(Second / p)
+}
+
 func (p Period) String() string {
 	if p >= Second {
 		return convertMacroTime(p)

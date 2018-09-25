@@ -16,7 +16,7 @@ const (
 )
 
 func (freq Frequency) Period() Period {
-	return Period(float64(Second) / float64(freq))
+	return Second / Period(freq)
 }
 
 func (freq Frequency) String() string {

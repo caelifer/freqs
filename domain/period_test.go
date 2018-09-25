@@ -22,6 +22,9 @@ func Test__Period_String(t *testing.T) {
 			10*Hour + 23*Minute + 50*Second + 20*Millisecond,
 			"10h23m50.02s",
 		}, {
+			2*Day + 10*Hour + 23*Minute + 50*Second + 20*Millisecond,
+			"2d10h23m50.02s",
+		}, {
 			7*Week + 10*Hour + 23*Minute + 50*Second + 20*Millisecond,
 			"7w10h23m50.02s",
 		}, {

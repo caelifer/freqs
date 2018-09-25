@@ -47,7 +47,7 @@ func Test__Frequency_Period(t *testing.T) {
 
 	for _, tc := range testCases {
 		res := tc.freq.Period()
-		//t.Logf("for freq %v expected duration per cycle: %v, got %v", tc.freq, tc.expected, res)
+		t.Logf("for freq %v expected duration per cycle: %v, got %v; converted freq: %v", tc.freq, tc.expected, res, res.Frequency())
 		if res != tc.expected {
 			t.Errorf("[FAILED] expected duration per cycle for freq %v: %v, got: %v", tc.freq, tc.expected, res)
 		}
