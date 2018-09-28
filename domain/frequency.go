@@ -21,27 +21,27 @@ func (freq Frequency) Period() Period {
 
 func (freq Frequency) String() string {
 	var (
-		tunit string
-		fmod  Frequency
+		units string
+		div   Frequency
 	)
 
 	switch {
 	case freq > THz/10:
-		tunit = "THz"
-		fmod = THz
+		units = "THz"
+		div = THz
 	case freq > GHz/10:
-		tunit = "GHz"
-		fmod = GHz
+		units = "GHz"
+		div = GHz
 	case freq > MHz/10:
-		tunit = "MHz"
-		fmod = MHz
+		units = "MHz"
+		div = MHz
 	case freq > KHz/10:
-		tunit = "kHz"
-		fmod = KHz
+		units = "kHz"
+		div = KHz
 	default:
-		tunit = "Hz"
-		fmod = Hz
+		units = "Hz"
+		div = Hz
 	}
 
-	return fmt.Sprintf("%s%s", strconv.FormatFloat(float64(freq)/float64(fmod), 'f', -1, 64), tunit)
+	return fmt.Sprintf("%s%s", strconv.FormatFloat(float64(freq/div), 'f', -1, 64), units)
 }
