@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test__Period_String(t *testing.T) {
+func Test__Period2String(t *testing.T) {
 	testCases := []struct {
 		period   Period
 		expected string

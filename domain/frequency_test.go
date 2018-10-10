@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func Test__Frequency_Period(t *testing.T) {
+func Test__Frequency2Period(t *testing.T) {
 	testCases := []struct {
 		freq     Frequency
 		expected Period
